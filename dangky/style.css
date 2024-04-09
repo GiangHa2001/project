@@ -1,0 +1,17 @@
+.form {
+    width: 50%;
+    padding: 20px;
+    margin: 0 auto;
+    font-weight: 700px; 
+    padding-top: 15%;
+   }
+   .form input {
+    width: 100%;
+    padding: 10px 0;
+   } 
+   /* .dangky {
+    width: 50%;
+    margin:10px auto;
+    padding-top: 15%;
+    padding: 20px;
+    } */
