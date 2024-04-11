@@ -25,7 +25,7 @@ $query = mysqli_query($ketnoi, "SELECT * FROM sanpham WHERE loaisp='tra'" );
 ?>
     <section class="header">
     <div class="container-sm py-3 ">
-            <div class="row">
+    <div class="row">
                 <div class="col-md-3 ">
                     <div class="row">
                             <img src="img/hinhchay/2.jpg" alt="logo" class="img-fluid">
@@ -40,7 +40,7 @@ $query = mysqli_query($ketnoi, "SELECT * FROM sanpham WHERE loaisp='tra'" );
                       </div>    
                 </form>    
                 </div>
-               <div style="padding-left:20px;" class="col-md-4">
+               <div style="padding-left:10px;" class="col-md-4">
                 <div class="row">
                   <div class="col">
                     <a href="tel:0369352144" style='text-decoration:none; color:black;'>
@@ -64,25 +64,29 @@ $query = mysqli_query($ketnoi, "SELECT * FROM sanpham WHERE loaisp='tra'" );
                         </div>
                       </div>
                       <div style="font: Times New Roman;" class="col-9">Xin chào<br>
-                    <strong class="text-danger">Đăng nhập</strong></div>
+                      <?php
+                      $username=$_GET['id'];
+                      ?>
+                    <strong class="text-danger"><?php 
+                    if($username!="")
+                    echo"$username"; 
+                  else echo"Đăng nhập";
+                  ?></strong></div>
+               
                     </div>
                   </a>
                   </div>
                 </div>
                </div>
-                  <div class="col-md-1">
+               <div class="col-md-1">
                     <div class="row">
-                          <div style="padding-left:60px;" class="col">
-                            <a href="giohang.php" class="position-relative">
-                                <span class="fs-2"><i class="fa-solid fa-cart-shopping"></i></span>
-                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                  0
-                                  <span class="visually-hidden">unread messages</span>
-                                </span>
+                          <div style="padding-left:60px; padding-top:10px;" class="col">
+                            <a href="giohang.php?id=<?php echo"$username";?>" class="position-relative">
+                                <span class="fs-2"><i class="fa-solid fa-cart-shopping" style="color: #dc3545;"></i></span>
                             </a>
                         </div>
                     </div>    
-                </div>    
+                </div> 
             </div>
         </div>
     </section>
@@ -100,26 +104,26 @@ $query = mysqli_query($ketnoi, "SELECT * FROM sanpham WHERE loaisp='tra'" );
                           <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                               <li class="nav-item">
-                                <a class="nav-link text-white active" aria-current="page" href="index1.php">Trang chủ</a>
+                                <a class="nav-link text-white active" aria-current="page" href="user.php?id=<?php echo"$username";?>">Trang chủ</a>
                               </li>
                               <li class="nav-item">
-                                <a href="gioithieu.php" class="nav-link text-white " >Giới thiệu</a>
+                                <a href="gioithieu.php?id=<?php echo"$username";?>" class="nav-link text-white " >Giới thiệu</a>
                               </li>
                               <li class="nav-item dropdown">
                                 <a href="#" class="nav-link text-white dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                   Sản phẩm
                                 </a>
                                 <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="sanpham/tra.php">Trà</a></li>
-                                  <li><a class="dropdown-item" href="sanpham/trasua.php">Trà sữa</a></li>
-                                  <li><a class="dropdown-item" href="sanpham/latte.php">Món Khác</a></li>
+                                  <li><a class="dropdown-item" href="sanpham/tra.php?id=<?php echo"$username";?>">Trà</a></li>
+                                  <li><a class="dropdown-item" href="sanpham/trasua.php?id=<?php echo"$username";?>">Trà sữa</a></li>
+                                  <li><a class="dropdown-item" href="sanpham/latte.php?id=<?php echo"$username";?>">Món Khác</a></li>
                                 </ul>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link text-white active" aria-current="page" href="tintuc.php">Tin tức</a>
+                                <a class="nav-link text-white active" aria-current="page" href="tintuc.php?id=<?php echo"$username";?>">Tin tức</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link text-white active" aria-current="page" href="lienhe.php">Liên hệ</a>
+                                <a class="nav-link text-white active" aria-current="page" href="lienhe.php?id=<?php echo"$username";?>">Liên hệ</a>
                               </li>
                             </ul>
 
@@ -197,8 +201,8 @@ $query = mysqli_query($ketnoi, "SELECT * FROM sanpham WHERE loaisp='tra'" );
                 </div>
                 <div class="col-3"> <h5>TƯ VẤN KHÁCH HÀNG</h5>
                     <ul>
-                    <li><a href="cauhoicf.php"><i class="fa-brands fa-google-wallet"></i> Câu hỏi về chuẩn bị cà phê</a></li>
-                        <li><a href="lienhe.php"><i class="fa-brands fa-google-wallet"></i> Liên hệ với chúng tôi</a></li>
+                    <li><a href="cauhoicf.php?id=<?php echo"$username";?>"><i class="fa-brands fa-google-wallet"></i> Câu hỏi về chuẩn bị cà phê</a></li>
+                        <li><a href="lienhe.php?id=<?php echo"$username";?>"><i class="fa-brands fa-google-wallet"></i> Liên hệ với chúng tôi</a></li>
                     </ul>
                 </div>
                 <div class="col-4"> <h5>OPEN HOURS</h5>
