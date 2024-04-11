@@ -210,14 +210,21 @@ $tt=$tt+$row['gia'];
             </tr>";}
                 ?>
                 <tr>
-                <th>
+                <th>Thành Tiền<th>
+                <th style="padding-left:17%; color: red; ">
              <?php
              echo "$tt";
              ?>
                 </th>
-</tr>
-            </table>
+               
+                  
+                
+              </tr>
+            </table><?php echo"
+             <a href='xoa_du_lieu.php?id=$username'><input style='float: right; border: 5px inset #d63745; background-color: #d63745; color: antiquewhite; width:30%' type='submit' id='txtthanhtoan' value='Thanh Toán'></a>";?>
+             <!-- <button id="txtthanhtoan" onclick="thanhtoan()" type="button" style='float: right; border: 5px inset #d63745; background-color: #d63745; color: antiquewhite; width:30%'>Thanh toán</button> -->
         </div>
+       
     </div>
         </section>
 
@@ -231,8 +238,8 @@ $tt=$tt+$row['gia'];
                 </div>
                 <div class="col-3"> <h5>TƯ VẤN KHÁCH HÀNG</h5>
                     <ul>
-                    <li><a href="cauhoicf.php"><i class="fa-brands fa-google-wallet"></i> Câu hỏi về chuẩn bị cà phê</a></li>
-                        <li><a href="lienhe.php"><i class="fa-brands fa-google-wallet"></i> Liên hệ với chúng tôi</a></li>
+                    <li><a href="cauhoicf.php?id=<?php echo"$username";?>"><i class="fa-brands fa-google-wallet"></i> Câu hỏi về chuẩn bị cà phê</a></li>
+                        <li><a href="lienhe.php?id=<?php echo"$username";?>"><i class="fa-brands fa-google-wallet"></i> Liên hệ với chúng tôi</a></li>
                     </ul>
                 </div>
                 <div class="col-4"> <h5>OPEN HOURS</h5>
@@ -286,6 +293,20 @@ $tt=$tt+$row['gia'];
         }
     }
 </script>
+<!-- <script>
+function thanhtoan() {
+  alert("Bạn đã nhấn nút thanh toán!");
+  var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            // Xử lý phản hồi từ server (nếu cần)
+            console.log(this.responseText); // In ra phản hồi từ server trong console
+        }
+    };
+    xhttp.open("GET", "xoa_du_lieu.php", true); // Gửi yêu cầu GET đến tệp PHP xóa dữ liệu
+    xhttp.send();
+}
+</script> -->
     </body>
 </html> 
    

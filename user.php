@@ -265,8 +265,8 @@ $query = mysqli_query($ketnoi, "SELECT * FROM sanpham" );
                 </div>
                 <div class="col-3"> <h5>TƯ VẤN KHÁCH HÀNG</h5>
                     <ul>
-                    <li><a href="cauhoicf.php"><i class="fa-brands fa-google-wallet"></i> Câu hỏi về chuẩn bị cà phê</a></li>
-                        <li><a href="lienhe.php"><i class="fa-brands fa-google-wallet"></i> Liên hệ với chúng tôi</a></li>
+                    <li><a href="cauhoicf.php?id=<?php echo"$username";?>"><i class="fa-brands fa-google-wallet"></i> Câu hỏi về chuẩn bị cà phê</a></li>
+                        <li><a href="lienhe.php?id=<?php echo"$username";?>"><i class="fa-brands fa-google-wallet"></i> Liên hệ với chúng tôi</a></li>
                     </ul>
                 </div>
                 <div class="col-4"> <h5>OPEN HOURS</h5>
