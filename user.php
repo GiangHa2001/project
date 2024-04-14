@@ -180,7 +180,7 @@ $query = mysqli_query($ketnoi, "SELECT * FROM sanpham" );
                 <p class="card-text">Tại các thành phố nhộn nhịp không thể thiếu gì những quán cafe đẹp độc lạ, nhưng hôm nay mình sẽ giới thiệu đến bạn một quán cafe mới mở mang phong cách thiên nhiên- <strong> Fast coffee</strong>.</p>
                 <p><strong>Địa chỉ:</strong> 101 Lý Tự Trọng</p>
                 <p><strong> Fast coffee</strong> mang trong mình phong cách thiên nhiên vô cùng độc đáo, yên bình, mới lạ hứa hẹn sẽ làm hài lòng tất cả các khách trải nghiệm cũng như các khách hàng khó tính nhất cùng với các đồ uống khác nhau và các món "cafe muối" đặc sắc.</p>
-                <a href="gioithieu.php" class="btn btn-primary">Xem Thêm</a>
+                <a href="gioithieu.php?id=<?php echo"$username";?>" class="btn btn-primary">Xem Thêm</a>
               </div>
             </div>
           </div>
